@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>This is HTML forms tutorial</h2>
+    <form action="backend.php">
+        <div>
+        <label for="name"> Name: </label>
+        <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+        <label for="myRole"> Role: </label>
+        <input type="text" name="myRole" id="myRole">
+    </div>
+    <br>
+    <div>
+            <label for="myEmail"> Email: </label>
+             <input type="email" name="myEmail" id="myEmail"> 
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for="myDate">Date: </label>
+            <input type="date" name="" id="myDate">
+        </div>
+        <br>
+        <div>
+            <label for="myBonus">Bonus: </label>
+              <input type="number" name="myBonus" id="myBonus">
+        </div>
+        <br>
+        <div>
+            <label for="myEligibility">Are you eligible: </label>
+            <input type="checkbox" name="" id="myEligibility" checked>
+        </div>
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+            Others <input type="radio" name="myGender">
+        </div>
+        <br>
+        <div>
+            <label for="textarea">About Yourself: </label>
+            <br><textarea name="myText" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="ind">Indica</option>
+                <option value="swf">Indica</option>
+                <option value="bmw" selected>BMW</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+</body>
+</html>
