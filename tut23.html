@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagivation</title>
+    <style>
+      body{
+          background-image: url(MyProject/bg.png);
+      }
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+      }
+      .navbar{
+        background-color: orange;
+        border-radius: 2px;
+        position: sticky;
+
+      }
+      .navbar ul{
+        overflow: auto;
+      }
+      .navbar li{
+        float: left;
+        list-style: none;
+        margin: 13px 20px;
+        padding-top: 3px;
+      }  
+      .navbar li a{
+        padding: 3px 3px;
+        text-decoration: none;
+        color: white;
+         transition: 0.2s ease-in-out; 
+         font-weight: bold;
+
+      }
+      .navbar li a:hover{
+        padding: 3px 3px;
+        text-decoration: none;
+      background-color: darkorange;
+      color: white;
+      }
+      .search{
+        color: white;
+        padding: 12px 75px;
+        float: right;
+      }
+      .navbar input{
+        border: 2px solid black;
+        border-radius: 14px;
+        padding: 3px 17px;
+        width: 129px;
+      }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+               <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a> </li>
+               <li><a href="#">Image</a></li>
+               <li><a href="#">Contact Us</a> </li>
+
+               <div class="search">
+               <input type="text" name="search" id="search" placeholder="seach this website">
+               </div>
+               </ul> 
+
+        </nav>
+    </header>
+</body>
+</html>

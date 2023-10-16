@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagivation</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url(bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        .navbar {
+            background-color: rgba(240, 191, 100, 0.556);
+            border-radius: 2px;
+            position: fixed;
+            width: 100vw;
+            transition: 1s ease-in-out;
+        }
+
+        .navbar ul {
+            overflow: auto;
+            padding-left: 310px;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+            padding-top: 3px;
+        }
+
+        .navbar li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+            transition: 0.2s ease-in-out;
+            font-weight: bold;
+
+        }
+
+        .navbar li a:hover {
+            padding: 3px 3px;
+            text-decoration: none;
+            background-color: darkorange;
+            color: white;
+        }
+
+        .search {
+            color: white;
+            padding: 12px 75px;
+            float: right;
+        }
+
+        .navbar input {
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+        .page1 {
+            background-color: red;
+            height: 100vh;
+            width: 100vw;
+            transition: 1s ease-in-out;
+        }
+
+        .page2 {
+            background-color: yellow;
+            height: 100vh;
+            width: 100vw;
+            transition: 1s ease-in-out;
+        }
+
+        .page3 {
+            background-color: green;
+            height: 100vh;
+            width: 100vw;
+            transition: 1s ease-in-out;
+
+        }
+
+        .page4 {
+            background-color: peru;
+            height: 100vh;
+            width: 100vw;
+            transition: 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#one">Home</a></li>
+                <li><a href="#two">About</a> </li>
+                <li><a href="#three">Image</a></li>
+                <li><a href="#four">Contact Us</a> </li>
+
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="seach this website"> <input
+                        style="height: 20px; width: 20px; border: none; background-color: cadetblue; border-radius: 10px; display: inline; position: absolute; margin-left: 10px;"
+                        type="button" id="research" onclick="get()" value="">
+                </div>
+            </ul>
+
+        </nav>
+    </header>
+    <div id="one" style="font-size: 60px; " class="page1">Home</div>
+    <div id="two" style="font-size: 60px; " class="page2">About</div>
+    <div id="three" style="font-size: 60px; " class="page3">Image</div>
+    <div id="four" style="font-size: 60px; " class="page4">Contact Us</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 100, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+    function get() {
+        a = document.getElementById("search").value;
+        if (a == "facebook") {
+            window.location.replace("https://facebook.com")
+        }
+        else if (a == "google") {
+            window.location.replace("https://google.com")
+        }
+       else if (a == "codeforces") {
+            window.location.replace("https://codeforces.com")
+        } else {
+
+            // https://www.google.com/search?q=apple+baal
+
+             myString = a
+             myStringWithoutSpaces = myString.replaceAll(' ', '+') // Replace all spaces with ''
+             myStringWithoutSpaces = "https://www.google.com/search?q="+myStringWithoutSpaces;
+             window.location.replace(myStringWithoutSpaces)
+
+            // Output: "Hellohowareyou?" 
+
+        }
+    }
+
+</script>
+
+</html>
