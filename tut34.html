@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and text shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 23px 23px;
+            border: 2px solid red;
+            margin: 23px 12px;
+            background-color: red;
+            box-shadow: 2px 4px green; /* positive for down */
+            box-shadow : -2px -4px green; /* negation for up */
+            box-shadow : 2px 4px 10px green; /*  first paramaters -> x-axiz | second -> y-axis | third -> blur radious | fourth -> spred the radious */
+            box-shadow : 2px 4px 10px 2px rgba(9, 215, 9,0.5); /*fourth parameters for spreading the radious */
+            box-shadow: inset 3px 5px green;
+            box-shadow: 10px 23px green, 10px 23px orange;
+        }
+        .card h2{
+            /* text-shadow: 3px 4px orange; */
+            text-shadow: 3px 4px 3px orange;
+            text-shadow: -3px -4px 3px green; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+   <div class="card" id="card-1">
+    <h2>This is c++ course</h2>
+    <p>I have started the c++ code
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam repellat fugiat voluptatum sequi blanditiis iusto mollitia cupiditate culpa rerum ducimus. Voluptatum, quis modi cum odit amet porro. Assumenda eum similique reiciendis aperiam error distinctio!</p>
+</div>
+   <div class="card" id="card-2">box-shadow: inset 3px 5px green;
+    <h2>this is html course</h2>
+    <p>Veniam repellat fugiat voluptatum sequi blanditiis iusto mollitia cupiditate culpa rerum ducimus. Voluptatum, quis modi cum odit amet porro. Assumenda eum similique reiciendis aperiam error distinctio!</p>
+</div>
+   <div class="card" id="card-3">
+ <h2>this is Css Course</h2>   
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam repellat fugiat voluptatum sequi blanditiis iusto mollitia cupiditate culpa rerum ducimus. Voluptatum, quis modi cum odit amet porro. Assumenda eum similique reiciendis aperiam error distinctio!</p>
+</div> 
+</div>
+</body>
+</html>
